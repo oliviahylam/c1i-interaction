@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NYC Iconic Artworks</title>
+    <link rel="stylesheet" href="stylehome.css"> <!-- Link to external CSS file -->
+</head>
+
+<body>
+    <h1>Welcome to the Virtual NYC Art Gallery</h1>
+    <p style="text-align: center;">Click on a neighborhood to explore its iconic artworks!</p>
+
+    <div class="map-container">
+        <!-- Interactive image with the map -->
+        <img src="https://www.new-york-city-map.com/manhattan-map.gif" usemap="#image-map" alt="Interactive Map of Manhattan">
+
+        <!-- Define clickable areas for the image -->
+        <map name="image-map">
+            <!-- Updated clickable areas with hover and pop-up features -->
+            <area alt="World Trade Center" title="World Trade Center" data-tooltip-id="wtc-tooltip" coords="327,1898,419,1902,421,1940,363,1942,329,1916" shape="poly" onclick="showTooltip('wtc-tooltip', event)">
+            <div class="highlight-box" style="top: 1898px; left: 327px; width: 92px; height: 42px;"></div>
+
+            <area alt="Financial District" title="Financial District" data-tooltip-id="financial-tooltip" coords="572,1892,323,1844,295,1854,354,2011,400,2068,488,2076" shape="poly" onclick="showTooltip('financial-tooltip', event)">
+            <div class="highlight-box" style="top: 1844px; left: 295px; width: 277px; height: 232px;"></div>
+
+            <area alt="Rockefeller Center" title="Rockefeller Center" href="entry2.html" coords="346,979,422,1037" shape="rect">
+            <div class="highlight-box" style="top: 979px; left: 346px; width: 76px; height: 58px;"></div>
+
+            <area alt="Hudson Yards" title="Hudson Yards" href="entry3.html" coords="110,1114,204,1249" shape="rect">
+            <div class="highlight-box" style="top: 1114px; left: 110px; width: 94px; height: 135px;"></div>
+
+            <area alt="Central Park" title="Central Park" href="entry5.html" coords="406,888,274,255" shape="rect">
+            <div class="highlight-box" style="top: 255px; left: 274px; width: 132px; height: 633px;"></div>
+
+            <area alt="Liberty Island" title="Liberty Island" href="entry9.html" coords="314,2085,587,2138" shape="rect">
+            <div class="highlight-box" style="top: 2085px; left: 314px; width: 273px; height: 53px;"></div>
+        </map>
+
+        <!-- Tooltips for the different areas -->
+        <div id="financial-tooltip" class="tooltip">
+            <h3>Financial District</h3>
+            <div class="tooltip-content">
+                <a href="entry6.html">
+                    <img src="https://www.thewallstreetexperience.com/wp-content/uploads/2020/07/Final-44-of-148-1.jpg" alt="Charging Bull">
+            
+                </a>
+                <a href="entry8.html">
+                    <img src="https://static01.nyt.com/images/2017/03/28/nyregion/28XP-GIRL-01p/28XP-GIRL-01p-superJumbo.jpg" alt="Fearless Girl">
+                    
+                </a>
+                <a href="entry4.html">
+                    <img src="https://publicdelivery.org/wp-content/uploads/2022/07/Isamu-Noguchi-Red-Cube-1968-steel-aluminum-24-feet-tall-installation-view-140-Broadway-New-York-800x534@2x.jpg" alt="Red Cube">
+                    
+                </a>
+            </div>
+        </div>
+
+        <div id="wtc-tooltip" class="tooltip">
+            <h3>World Trade Center</h3>
+            <div class="tooltip-content">
+                <a href="entry7.html">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/6/62/The_sphere.jpg" alt="The Sphere">
+                    
+                </a>
+                <a href="entry10.html">
+                    <img src="https://static.dezeen.com/uploads/2016/08/santiago-calatrava-oculus-world-trade-center-transportation-hub-hufton-crow_dezeen_10-1704x1459.jpg" alt="Oculus">
+                    
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <script src="scriptindex.js"></script> <!-- Link to external JavaScript file -->
+</body>
+
+</html>

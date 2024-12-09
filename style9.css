@@ -1,0 +1,88 @@
+/* Using PT Sans Narrow */
+.pt-sans-narrow-regular {
+    font-family: "PT Sans Narrow", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.pt-sans-narrow-bold {
+    font-family: "PT Sans Narrow", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+body {
+    background: url('https://cdn.britannica.com/31/94231-050-C6B60B89/Statue-of-Liberty-Island-Upper-New-York.jpg') no-repeat center center fixed; /* Set image as background */
+    background-size: cover; /* Make sure the image covers the entire page */
+    font-family: "PT Sans Narrow", sans-serif; /* Default to regular weight */
+    margin: 40px; /* Added margin for better readability */
+    color: #ffffff; /* Light color for text for contrast with the background */
+    line-height: 1.6; /* Increase line height for readability */
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8); /* Add shadow to improve text contrast */
+}
+
+.artwork-container {
+    max-width: 800px; /* Limit max-width for better reading */
+    margin: 0 auto; /* Center the content */
+    padding: 20px;
+    background-color: #000000; /* Dark grey background for improved readability */
+    border-radius: 8px; /* Rounded corners for better aesthetics */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4); /* Light shadow for depth */
+}
+
+h1 {
+    color: #ffffff; /* White heading color for contrast */
+    text-align: center;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Add shadow to improve text contrast */
+}
+
+.image-container {
+    position: relative;
+    width: fit-content;
+    margin: 20px auto; /* Center image horizontally */
+}
+
+.image-container img {
+    width: 100%;
+    max-width: 500px;
+    transition: transform 0.3s ease;
+    border-radius: 8px; /* Rounded corners for the image */
+}
+
+.image-container:hover img {
+    transform: scale(1.05); /* Slight zoom on hover */
+}
+
+.title-overlay {
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    color: #ffffff; /* White text for contrast */
+    background-color: rgba(0, 0, 0, 0.7); /* Black background with opacity */
+    padding: 10px 0;
+    font-size: 1.2em;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+
+.image-container:hover .title-overlay {
+    opacity: 1;
+}
+
+p {
+    color: #ffffff; /* Light color for readability */
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8); /* Add shadow to improve text contrast */
+}
+
+.back-link {
+    color: #ffcc00; /* Yellow link color for contrast with the background */
+    text-decoration: none;
+}
+
+.back-link:hover {
+    text-decoration: underline;
+}

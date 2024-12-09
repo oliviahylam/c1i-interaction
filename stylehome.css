@@ -1,0 +1,149 @@
+/* Importing PT Sans Narrow for general use */
+body, h1, p, .tooltip {
+    font-family: 'PT Sans Narrow', sans-serif;
+}
+
+/* General Styles */
+body {
+    background: url('https://www.royalcitytours.com/wp-content/uploads/2020/07/SKYLINE-NIGHT-2-scaled.jpg') no-repeat center center fixed; /* Set image as background */
+    background-size: cover; /* Make sure the image covers the entire page */
+    color: white; /* Set text color to white */
+    margin: 0;
+    line-height: 1.6; /* Increase line height for readability */
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8); /* Add shadow to improve text contrast */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    color: white;
+    font-size: 2em;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Add shadow to improve text contrast */
+}
+
+p {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 1em;
+    color: white;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8); /* Add shadow for contrast */
+}
+
+.content-wrapper {
+    max-width: 800px; /* Limit max-width for better reading */
+    margin: 20px auto; /* Center the content */
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent black background */
+    border-radius: 8px; /* Rounded corners for better aesthetics */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4); /* Light shadow for depth */
+}
+
+.map-container {
+    position: relative;
+    text-align: center;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.map-container img {
+    width: 100%;
+    height: auto;
+    border: 2px solid white;
+    border-radius: 8px; /* Rounded corners for consistency */
+}
+
+/* Overlay boxes */
+.highlight-box {
+    position: absolute;
+    border: 2px solid green;
+    pointer-events: none;
+    display: none;
+}
+
+/* Highlight the box on hover */
+area:hover + .highlight-box {
+    display: block;
+}
+
+/* Tooltip styling */
+.tooltip {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.9);
+    color: white;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+    display: none;
+    z-index: 10;
+    width: 80vw;
+    max-width: 400px;
+}
+
+.tooltip-content {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.tooltip-content a img {
+    width: 80px;
+    height: auto;
+    border-radius: 4px;
+    border: 2px solid white;
+    transition: transform 0.2s;
+}
+
+.tooltip-content a img:hover {
+    transform: scale(1.1);
+}
+
+/* Responsive Styles for Mobile */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 1.5em; /* Smaller font size for headings */
+    }
+
+    p {
+        font-size: 0.9em; /* Smaller font size for text */
+    }
+
+    .content-wrapper {
+        max-width: 95%; /* Adjust width for smaller screens */
+        padding: 15px; /* Reduce padding for better fit */
+    }
+
+    .map-container img {
+        width: 100%; /* Ensure map fits within screen */
+    }
+
+    .tooltip {
+        width: 90vw; /* Adjust tooltip width */
+        max-width: none; /* Remove max-width */
+    }
+
+    .tooltip-content a img {
+        width: 60px; /* Smaller images in tooltips */
+    }
+}
+
+/* Responsive Styles for Very Small Screens */
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.2em; /* Further reduce font size */
+    }
+
+    p {
+        font-size: 0.8em; /* Further reduce paragraph text */
+    }
+
+    .tooltip-content a img {
+        width: 50px; /* Even smaller images for very small screens */
+    }
+}
